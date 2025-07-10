@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrierungsformular</title>
+    <script src="form.js"></script>
+    
+</head>
+<body>
+
+    <form name="registrationForm" onsubmit="return validateForm()" onreset="return confirmReset()">
+        
+        <h2>Registrierung</h2>
+
+        <div>
+            <label for="username">Benutzername:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+
+        <div>
+            <label for="password">Passwort:</label>
+            <input type="password" id="password" name="password">
+        </div>
+
+        <div>
+            <label for="passwordRepeat">Passwort wiederholen:</label>
+            <input type="password" id="passwordRepeat" name="passwordRepeat">
+        </div>
+
+        <div>
+            <label for="email">E-Mail:</label>
+            <input type="email" id="email" name="email">
+        </div>
+
+        <div>
+            <label for="ageGroup">Altersgruppe:</label>
+            <select id="ageGroup" name="ageGroup">
+                <option value="u18">Unter 18</option>
+                <option value="18-35" selected>18-35</option>
+                <option value="36-50">36-50</option>
+                <option value="o50">Über 50</option>
+            </select>
+        </div>
+
+        <div>
+            <label>Interessen:</label>
+            <input type="checkbox" id="interest1" name="interests" value="sport"> <label for="interest1">Sport</label><br>
+            <input type="checkbox" id="interest2" name="interests" value="music"> <label for="interest2">Musik</label><br>
+            <input type="checkbox" id="interest3" name="interests" value="travel"> <label for="interest3">Reisen</label><br>
+            <input type="checkbox" id="interest4" name="interests" value="tech"> <label for="interest4">Technik</label><br>
+        </div>
+
+        <div>
+            <label>Geschlecht:</label>
+            <input type="radio" id="male" name="gender" value="male"> <label for="male">Männlich</label><br>
+            <input type="radio" id="female" name="gender" value="female"> <label for="female">Weiblich</label><br>
+            <input type="radio" id="diverse" name="gender" value="diverse"> <label for="diverse">Divers</label><br>
+        </div>
+
+        <div>
+            <label for="comments">Kommentare:</label>
+            <textarea id="comments" name="comments" rows="4"></textarea>
+        </div>
+        
+        <div>
+            <input type="reset" value="Zurücksetzen">
+            <input type="submit" value="Registrieren">
+        </div>
+
+    </form>
+</body>
+</html>
